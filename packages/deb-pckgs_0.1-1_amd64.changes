@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Wed, 19 Apr 2023 22:16:48 +0000
+Source: deb-pckgs
+Binary: deb-pckgs
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: serge <mail@sbtraining.net>
+Changed-By: Serge <serge@sbtraining.net>
+Description:
+ deb-pckgs  - Package with nginx config for local packages repo.
+Changes:
+ deb-pckgs (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ d2c5993f044f512e67d165f525c5b99c0a65f9b5 4150 deb-pckgs_0.1-1_all.deb
+ 7dc05d1816f7f521e2e114aa715e487f8172a059 5699 deb-pckgs_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 06ba0e9bb8b54eec04cb741af02851a20457eb0f16d534cd85c37db266fa9527 4150 deb-pckgs_0.1-1_all.deb
+ 618767d95bd49edface5a7237fe98f2ba819a8a49d5f71ba774035a2163c441a 5699 deb-pckgs_0.1-1_amd64.buildinfo
+Files:
+ 76f205c057fa373dbd7c8be46ec469ad 4150 misc extra deb-pckgs_0.1-1_all.deb
+ f2c0b5175ca9c874251bfc9dcb6e10c8 5699 misc extra deb-pckgs_0.1-1_amd64.buildinfo

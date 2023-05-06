@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Fri, 05 May 2023 00:01:57 +0000
+Source: deploy-ca
+Binary: deploy-ca
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Serge <mail@sbtraining.net>
+Changed-By: Serge <serge@sbtraining.net>
+Description:
+ deploy-ca  - Package for deploying CA server with configuration files
+Changes:
+ deploy-ca (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ 3010d0185db3a604aa0e2ba607b3335d5a89581e 10068 deploy-ca_0.1-1_all.deb
+ a0edeeaace39beecd41824815aca4fe3155d8cff 5702 deploy-ca_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ a26913c04cbb86ced411122d19e1ad41621b8bb743bc5d18b71d1151eb95dc19 10068 deploy-ca_0.1-1_all.deb
+ 41247044de3ff9c27d20144ec7f9b4f50177a0f575f7ac01334adc3643a80951 5702 deploy-ca_0.1-1_amd64.buildinfo
+Files:
+ aa315960ef914ef98d4b448a8652a2df 10068 misc optional deploy-ca_0.1-1_all.deb
+ 9af667efe990bd0c14ed6870e11ce741 5702 misc optional deploy-ca_0.1-1_amd64.buildinfo

@@ -1,0 +1,11 @@
+Source: deploy-mon
+Section: misc
+Priority: extra
+Maintainer: Serge <mail@sbtraining.net>
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+
+Package: deploy-mon
+Architecture: all
+Depends: nginx, openssl, prometheus (>=2.31), prometheus-alertmanager, prometheus-nginx-exporter, prometheus-node-exporter, prometheus-node-exporter-collectors, prometheus-blackbox-exporter, iptables-persistent
+Description: Package for deploying Prometheus monitoring server with configuration files 

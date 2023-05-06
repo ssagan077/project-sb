@@ -1,0 +1,12 @@
+4d39c3fa630b3019cabeeab644b2015a  usr/bin/ca_paths.sh
+ccc0db25e5d5a73ebd118d70c464fbc9  usr/bin/copy_pub_key2ovpn.sh
+44fd92e96e0e91ad3b6c0ac8924a10ec  usr/bin/copy_pub_key2pckg.sh
+04d15841c9e35c60a10add2aa0391b79  usr/bin/make_env_ca.sh
+d97f42224be32c2e8ed9c44a41a25eab  usr/bin/make_revoke_cert.sh
+432d2a573e2c2bec5040493c0b78f038  usr/bin/make_sign_req_all.sh
+e2054b746acf54cf681e9fe7453486f9  usr/bin/prepare_net.sh
+6367f5605792d9c963af0269a05adf71  usr/bin/start_ca.sh
+fb198770d5df3c8b48a6c214e89b625b  usr/share/doc/deploy-ca/README.Debian
+3c5d90aa74173c76f5073882e404ec98  usr/share/doc/deploy-ca/changelog.Debian.gz
+5cfabe1b53d2a5e98095a46e743358ec  usr/share/doc/deploy-ca/copyright
+5e626e14fe105a9b55f0fa7468f4dfd6  usr/share/easy-rsa/vars

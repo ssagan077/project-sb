@@ -1,0 +1,11 @@
+Source: deb-pckgs
+Section: misc
+Priority: extra
+Maintainer: serge <mail@sbtraining.net>
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+
+Package: deb-pckgs
+Architecture: all
+Depends: nginx, dpkg-dev, gnupg, bash
+Description: Package with nginx config for local packages repo. 

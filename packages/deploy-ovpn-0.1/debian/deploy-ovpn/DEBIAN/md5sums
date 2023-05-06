@@ -1,0 +1,15 @@
+08574c325826bac3e5a5aaefd02f4948  usr/bin/copy_pub_key2pckg.sh
+75171d5bbded13b9ed4e1c52e595b357  usr/bin/make_cli_config.sh
+92bc67cd104e5b8025f3805ff38294d7  usr/bin/make_cli_req.sh
+f7f8009719653ce3715d9feb466c76c9  usr/bin/make_env_ovpn.sh
+724e99bcc3dcb5dc0e076d435070c85a  usr/bin/make_srv_req.sh
+c9d0e1f76a7ff86f98e95ce09a058965  usr/bin/ovpn_paths.sh
+362b0dc77d689de542bb135a6ecbd979  usr/bin/prepare_net.sh
+78403917310bfc76dbc0b8e2451726fc  usr/bin/recv_revoked.sh
+ecdf0395471ae924a28c5000b6ef8ced  usr/bin/recv_sign_cli.sh
+fc3409d0b992e728dbcf47ae4bc7df1e  usr/bin/recv_sign_srv.sh
+d585875b2edd5dae06c55c3e98174293  usr/bin/start_ovpn.sh
+4d63297022e909a36ad697cda3814087  usr/share/doc/deploy-ovpn/README.Debian
+b0cf9a5951e0ea687aed16b18c395b92  usr/share/doc/deploy-ovpn/changelog.Debian.gz
+f2265ec47016bfb667d323375bbbe2af  usr/share/doc/deploy-ovpn/copyright
+5e626e14fe105a9b55f0fa7468f4dfd6  usr/share/easy-rsa/vars

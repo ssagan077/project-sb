@@ -1,0 +1,9 @@
+Package: deb-pckgs
+Version: 0.1-1
+Architecture: all
+Maintainer: serge <mail@sbtraining.net>
+Installed-Size: 23
+Depends: nginx, dpkg-dev, gnupg, bash
+Section: misc
+Priority: extra
+Description: Package with nginx config for local packages repo.

@@ -1,0 +1,7 @@
+*.sh usr/bin/
+*.yml etc/prometheus/
+prometheus_mon etc/default/
+prometheus-node-exporter_mon etc/default/
+prometheus-nginx-exporter_mon etc/default/
+prometheus-blackbox-exporter_mon etc/default/
+nginx-mon.conf etc/nginx/sites-available/

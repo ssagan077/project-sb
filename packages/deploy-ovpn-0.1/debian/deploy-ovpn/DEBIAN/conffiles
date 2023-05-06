@@ -1,0 +1,7 @@
+/etc/default/prometheus-node-exporter_mon
+/etc/openvpn/server/cli_base.conf
+/etc/openvpn/server/cli_base_wsk.conf
+/etc/openvpn/server/crl.pem
+/etc/openvpn/server/server.conf
+/etc/prometheus/web-node.yml
+/etc/sysctl_ovpn.conf

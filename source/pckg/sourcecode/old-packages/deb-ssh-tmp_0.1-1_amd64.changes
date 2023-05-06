@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Tue, 18 Apr 2023 23:30:36 +0000
+Source: deb-ssh-tmp
+Binary: deb-ssh-tmp
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: serge <mail@sbtraining.net>
+Changed-By: serge <mail@sbtraining.net>
+Description:
+ deb-ssh-tmp - Package with temporary ssh config for administrative purpose.
+Changes:
+ deb-ssh-tmp (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 2d7a8c1789daa5d3ae8db528eabe9ad7c85ed23f 4394 deb-ssh-tmp_0.1-1_all.deb
+ 4477e2019b8f208668a352145f2ccd68dc38bef7 5709 deb-ssh-tmp_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 3cf862f3975fefd0dc0eed577320a773a5ec7d96027e6bb5bbe143d836abf503 4394 deb-ssh-tmp_0.1-1_all.deb
+ 4399458898fc9826f0448c4a02414fee18ef01549d8180b33d643ff6559356a9 5709 deb-ssh-tmp_0.1-1_amd64.buildinfo
+Files:
+ 06f52fa86c2f6b3d86b8a6318699f9ff 4394 misc extra deb-ssh-tmp_0.1-1_all.deb
+ 789b58d5384d8ec28b80880c5ff2aa0e 5709 misc extra deb-ssh-tmp_0.1-1_amd64.buildinfo

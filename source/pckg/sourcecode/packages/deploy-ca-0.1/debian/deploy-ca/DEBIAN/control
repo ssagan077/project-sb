@@ -1,0 +1,9 @@
+Package: deploy-ca
+Version: 0.1-1
+Architecture: all
+Maintainer: Serge <mail@sbtraining.net>
+Installed-Size: 42
+Depends: easy-rsa, iptables-persistent, bash
+Section: misc
+Priority: optional
+Description: Package for deploying CA server with configuration files

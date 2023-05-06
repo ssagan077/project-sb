@@ -1,0 +1,5 @@
+e92e72d0eba8719843c2441fa602726e  usr/bin/openvpn_exporter
+0ae7e63bb13f03db749d0de6078cfa6e  usr/lib/systemd/system/openvpn-exporter.service
+904b16c3d9077af61d2b2a6bab923f5e  usr/share/doc/ovpn-exporter/README.Debian
+70501087f3b882630ffb3c396bd46fcb  usr/share/doc/ovpn-exporter/changelog.Debian.gz
+9c02a501ce8f6903e500ee336b05bb7f  usr/share/doc/ovpn-exporter/copyright

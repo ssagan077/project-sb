@@ -1,0 +1,9 @@
+./ca_paths.sh
+./copy_pub_key2ovpn.sh
+./copy_pub_key2pckg.sh
+./make_env_ca.sh
+./make_revoke_cert.sh
+./make_sign_req_all.sh
+./prepare_net.sh
+./start_ca.sh
+./vars

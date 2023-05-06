@@ -1,0 +1,14 @@
+[Unit]
+Description=OpenVPN exporter for prometheus
+Documentation=https://github.com/kumina/openvpn_exporter#readme
+After=network.target openvpn-server@.service
+
+[Service]
+Restart=on-failure
+User=prometheus
+ExecStart=/usr/bin/openvpn_exporter -openvpn.status_paths /var/log/openvpn/openvpn-status.log
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=5s
+
+[Install]
+WantedBy=multi-user.target

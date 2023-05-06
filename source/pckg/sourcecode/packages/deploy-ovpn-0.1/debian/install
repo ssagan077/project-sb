@@ -1,0 +1,9 @@
+*.sh usr/bin/
+server.conf etc/openvpn/server/
+cli_base.conf etc/openvpn/server/
+cli_base_wsk.conf etc/openvpn/server/
+crl.pem etc/openvpn/server/
+sysctl_ovpn.conf etc/
+vars usr/share/easy-rsa/
+*.yml etc/prometheus/
+prometheus-node-exporter_mon etc/default/

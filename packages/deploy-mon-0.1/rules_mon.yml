@@ -1,0 +1,162 @@
+groups:
+- name: node
+  rules:
+  - alert: DiskSpaceCriticallyLow
+    expr: ((node_filesystem_avail_bytes{mountpoint="/"}*100)/(node_filesystem_size_bytes{mountpoint="/"})) <= 50
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: Disk space critically low (Instance {{ $labels.instance }})
+      description: "disk space: remains {{ $value }} %"
+  - alert: NodeRequiredReboot
+    expr: node_reboot_required == 1
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Reboot required for server (Instance {{ $labels.instance }})
+      description: "Reboot required for server. Please, check it {{ $labels.instance }}"
+  - alert: ServiceFailed
+    expr: node_systemd_unit_state{state="failed"} > 0
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: SYSTEMD Service failed (Instance {{ $labels.instance }})
+      description: "SYSTEMD unit failed {{ $labels.name }}"
+  - alert: Node_Down
+    expr: up == 0
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      title: Node {{ $labels.instance }} is down
+      description: Failed to scrape {{ $labels.job }} on {{ $labels.instance }} for more than 2 minutes. Node seems down.
+  - alert: HostOutOfMemory
+    expr: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host out of memory (instance {{ $labels.instance }})
+      description: Node memory is filling up (< 10% left)\n  VALUE = {{ $value }}
+  - alert: HostMemoryUnderMemoryPressure
+    expr: rate(node_vmstat_pgmajfault[1m]) > 1000
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host memory under memory pressure (instance {{ $labels.instance }})
+      description: The node is under heavy memory pressure. High rate of major page faults\n  VALUE = {{ $value }}
+  - alert: HostUnusualDiskWriteRate
+    expr: sum by (instance) (rate(node_disk_written_bytes_total[2m])) / 1024 / 1024 > 50
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host unusual disk write rate (instance {{ $labels.instance }})
+      description: Disk is probably writing too much data (> 50 MB/s)\n  VALUE = {{ $value }}
+  - alert: HostInodesWillFillIn24Hours
+    expr: node_filesystem_files_free{mountpoint ="/rootfs"} / node_filesystem_files{mountpoint="/rootfs"} * 100 < 10 and predict_linear(node_filesystem_files_free{mountpoint="/rootfs"}[1h], 24 * 3600) < 0 and ON (instance, device, mount>    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host inodes will fill in 24 hours (instance {{ $labels.instance }})
+      description: Filesystem is predicted to run out of inodes within the next 24 hours at current write rate\n  VALUE = {{ $value }}
+  - alert: HostOomKillDetected
+    expr: increase(node_vmstat_oom_kill[1m]) > 0
+    for: 0m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host OOM kill detected (instance {{ $labels.instance }})
+      description: OOM kill detected\n  VALUE = {{ $value }}
+  - alert: HostClockNotSynchronising
+    expr: min_over_time(node_timex_sync_status[1m]) == 0 and node_timex_maxerror_seconds >= 16
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host clock not synchronising (instance {{ $labels.instance }})
+      description: Clock not synchronising.\n  VALUE = {{ $value }}
+- name: nginx
+  rules:
+  - alert: NginxInstanceDown
+    expr: nginx_up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: Nginx down (Instance {{ $labels.instance }})
+      description: "Nginx has been down for more than 1 minute"
+  - alert: nginx_high_number_active_connections
+    expr: nginx_connections_active > 5
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      description: "Nginx high number active connections on the host {{ $labels.instance }} for more than 3 minutes"
+      summary: "Suspiciously many active connections to nginx"
+  - alert: nginx_not_all_connections_are_handled
+    expr: rate (nginx_connections_handled[5m]) / rate (nginx_connections_accepted[5m]) <1
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      description: "Critical: Nginx does not handle all accept connections on the host {{ $labels.instance }} for more than 3 minutes"
+      summary: "Nginx issue with handling connections"
+- name: openvpn
+  rules:
+  - alert: OVPN_Instance_Down
+    expr: openvpn_up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: OpenVPN down (Instance {{ $labels.instance }})
+      description: "OpenVPN server has been down for more than 1 minute"
+  - alert: OVPN_no_Сlient_Сonnections
+    expr: openvpn_server_connected_clients == 0
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: The server does not have any client connection (Instance {{ $labels.instance }})
+      description: "OpenVPN probably has a problem with client connections {{ $labels.instance }}"
+- name: network
+  rules:
+  - alert: Unusual_Network_Activity
+    expr: sum by (instance) (rate(node_network_receive_bytes_total[1m])) / 1024 / 1024 > 1
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: Unusual network throughput in (Instance {{ $labels.instance }})
+      description: "Network interfaces are probably receiving to much data (>1 Mb/s)\n VALUE = {{ $value }}\n LABELS = {{ $labels }}"
+  - alert: HostNetworkReceiveErrors
+    expr: rate(node_network_receive_errs_total[2m]) / rate(node_network_receive_packets_total[2m]) > 0.01
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host Network Receive Errors (instance {{ $labels.instance }}:{{ $labels.device }})
+      description: Instance interface has encountered {{ printf "%.0f" $value }} receive errors in the last five minutes.\n  VALUE = {{ $value }}
+  - alert: HostNetworkTransmitErrors
+    expr: rate(node_network_transmit_errs_total[2m]) / rate(node_network_transmit_packets_total[2m]) > 0.01
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host Network Transmit Errors (instance {{ $labels.instance }}:{{ $labels.device }})
+      description: Instance has encountered {{ printf "%.0f" $value }} transmit errors in the last five minutes.\n  VALUE = {{ $value }}
+- name: ssl_cert_expire
+  rules:
+  - alert: SSLCertExpiringSoon
+    expr: probe_ssl_earliest_cert_expiry - time() < 86400 * 30
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: SSL Certificate will expire soon (Instance {{ $labels.instance }})
+      description: SSL Cerificate will expire after 30 days

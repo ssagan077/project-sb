@@ -1,0 +1,46 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package deb-pckgs
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Serge <serge@sbtraining.net>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/deb-pckgs/
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'deb-pckgs' in '../deb-pckgs_0.1-1_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../deb-pckgs_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../deb-pckgs_0.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian deb-pckgs_0.1-1_amd64.changes ...
+E: deb-pckgs: copyright-contains-dh_make-todo-boilerplate
+E: deb-pckgs: depends-on-essential-package-without-using-version Depends: bash
+E: deb-pckgs: extended-description-is-empty
+E: deb-pckgs: helper-templates-in-copyright
+W: deb-pckgs: copyright-has-url-from-dh_make-boilerplate
+W: deb-pckgs: initial-upload-closes-no-bugs
+W: deb-pckgs: priority-extra-is-replaced-by-priority-optional
+W: deb-pckgs: readme-debian-contains-debmake-template
+Finished running lintian.
