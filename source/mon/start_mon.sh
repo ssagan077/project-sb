@@ -26,8 +26,8 @@ fi
 
 #Adding local repo
 echo "Adding our repo to Repo list..."
-if [ $(grep "http://vm-pckg-srv" /etc/apt/sources.list | wc -l) -eq 0 ]; then
-    echo "deb [trusted=yes] http://vm-pckg-srv/debian ./" | tee -a /etc/apt/sources.list > /dev/null
+if [ $(grep "http://${pckg_server}.${domain_name}" /etc/apt/sources.list | wc -l) -eq 0 ]; then
+    echo "deb [trusted=yes] http://${pckg_server}.${domain_name}/debian ./" | tee -a /etc/apt/sources.list > /dev/null
 fi
 
 echo "Updating packages..."

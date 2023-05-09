@@ -1,2 +1,0 @@
-openvpn_exporter usr/bin/
-openvpn-exporter.service usr/lib/systemd/system/

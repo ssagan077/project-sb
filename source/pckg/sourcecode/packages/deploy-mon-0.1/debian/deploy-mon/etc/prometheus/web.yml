@@ -1,7 +1,0 @@
-tls_server_config:
-    cert_file: '/etc/prometheus/ssl/server-mon.crt'
-    key_file: '/etc/prometheus/ssl/server-mon.key'
-basic_auth_users:
-   admin: $2a$12$uFNmsi2CFScecPYHb0b8u.dSZyDrj8QzyKV6XlAl5rs3TP4HtbLeW
-#$2y$10$GwYdQnv9fqaqpPwBgKltp.oJ5SXd4DCqkbIRnjOWwG6Aj4mFkS.y
-

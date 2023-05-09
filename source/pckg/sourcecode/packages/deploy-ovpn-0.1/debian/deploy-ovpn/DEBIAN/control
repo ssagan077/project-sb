@@ -1,9 +1,0 @@
-Package: deploy-ovpn
-Version: 0.1-1
-Architecture: all
-Maintainer: serge <mail@sbtraining.net>
-Installed-Size: 98
-Depends: openvpn (>= 2.5), easy-rsa, iptables-persistent, prometheus-node-exporter (>= 1.3.1)
-Section: misc
-Priority: optional
-Description: Package for deploying OpenVPN server with configuration files

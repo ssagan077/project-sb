@@ -21,10 +21,10 @@ set -e
 
 case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-       [ -f /etc/nginx/sites-available/nginx_pckg.conf ] && rm -f /etc/nginx/sites-available/nginx_pckg.conf
-       [ -f /etc/nginx/sites-enabled/nginx_pckg.conf ] && rm -f /etc/nginx/sites-enable/nginx_pckg.conf
-       [ ! -f /etc/nginx/sites-enabled/default ] && ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-       invoke-rc.d nginx restart
+      [ ! -f /etc/nginx/sites-enabled/default ] && ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+      [ -f /etc/default/prometheus-node-exporter_bak ] && mv /etc/default/prometheus-node-exporter_bak /etc/default/prometheus-node-exporter
+      [ -f /etc/default/prometheus-nginx-exporter_bak ] && mv /etc/default/prometheus-nginx-exporter_bak /etc/default/prometheus-nginx-exporter
+      invoke-rc.d nginx restart
     ;;
 
     *)

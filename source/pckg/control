@@ -1,11 +1,11 @@
-Source: deb-pckgs
+Source: deploy-pckg
 Section: misc
 Priority: extra
 Maintainer: Serge <mail@sbtraining.net>
 Build-Depends: debhelper-compat (= 13)
 Rules-Requires-Root: no
 
-Package: deb-pckgs
+Package: deploy-pckg
 Architecture: all
-Depends: nginx, dpkg-dev, gnupg,  
-Description: Package with nginx config for local packages repo. 
+Depends: nginx (>= 1.18), openssl, dpkg-dev (>= 1.21), gnupg, dh-make (>= 2.202102), devscripts (>= 2.22), prometheus-nginx-exporter, prometheus-node-exporter, iptables-persistent   
+Description: Package with nginx config for local packages Repository. 

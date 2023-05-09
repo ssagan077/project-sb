@@ -20,7 +20,14 @@ set -e
 
 case "$1" in
     configure)
-        invoke-rc.d nginx restart
+        [ ! -d /etc/prometheus/ssl ] && mkdir -p /etc/prometheus/ssl
+        [ -f /etc/default/prometheus-node-exporter ] && mv /etc/default/prometheus-node-exporter /etc/default/prometheus-node-exporter_bak
+        [ -f /etc/default/prometheus-nginx-exporter ] && mv /etc/default/prometheus-nginx-exporter /etc/default/prometheus-nginx-exporter_bak
+        [ -f /etc/default/prometheus-node-exporter_pckg ] && mv /etc/default/prometheus-node-exporter_pckg /etc/default/prometheus-node-exporter
+        [ -f /etc/default/prometheus-nginx-exporter_pckg ] && mv /etc/default/prometheus-nginx-exporter_pckg /etc/default/prometheus-nginx-exporter
+        #[ -f /etc/nginx/sites-enabled/nginx-pckg.conf ] && ln -s /etc/nginx/sites-available/nginx-pckg.conf /etc/nginx/sites-enabled/nginx-pckg.conf
+        invoke-rc.d prometheus-node-exporter stop
+        invoke-rc.d prometheus-nginx-exporter stop
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
