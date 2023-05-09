@@ -9,8 +9,8 @@ fi
 source pckg_paths.sh
 
 packages_dir="${git_dir}/packages"
-pckg_dir="${packages_dir}/deb-ssh-tmp-0.1"
-data_dir="${git_dir}/source/ssh"
+pckg_dir="${packages_dir}/deploy-pckg-0.1"
+data_dir="${git_dir}/source/pckg"
 
 # Checking for installed software
 check_installed "openssl"
@@ -34,17 +34,26 @@ else
 fi
 
 #Checking if pckg already exists
-ls deb-ssh-* 2>/dev/null && echo "Package deb-pckgs already exist. Please, remove it manually to continue setup" && exit 1
+ls deploy-pckg_* 2>/dev/null && echo "Package deb-pckgs already exist. Please, remove it manually to continue setup" && exit 1
 
 #Copy config files
 echo "Copying config files..."
 
-if [ ! -f ${data_dir}/sshd_config_tmp ]; then
-   echo "File $data_dir/sshd_config_tmp not found!"
+if [ ! -f ${data_dir}/pckg_list ]; then
+   echo "File ${data_dir}/pckg_list not found!"
    exit 1
-else
-   cp ${data_dir}/sshd_config_tmp ${pckg_dir}/
 fi
+
+while IFS= read -r p_file
+do
+    if [ ! -f ${data_dir}/${p_file} ]; then
+         echo "ERROR: file ${data_dir}/${p_file} not found!"
+         exit 1
+    else
+         cp ${data_dir}/${p_file} $pckg_dir
+    fi
+done < ${data_dir}/pckg_list
+
 
 echo "Please edit ~/.bashrc; Add keys: export CITY, export DEBEMAIL, export DEBFULLNAME"
 sleep 3
@@ -70,7 +79,7 @@ fi
 #Creating template of our deb-package
 echo "Creating template of our deb-package..."
 cd $pckg_dir
-
+sleep 2
 dh_make --indep --createorig && echo "Template created" || exit 1
 
 if [ ! -d "debian" ]; then
@@ -79,10 +88,14 @@ if [ ! -d "debian" ]; then
 fi
 
 #Creating file install
-echo "sshd_config_tmp etc/ssh/" >> debian/install
+echo "*.sh usr/bin/" >> debian/install
+echo "*.yml etc/prometheus/" >> debian/install
+echo "prometheus-node-exporter_pckg etc/default/" >> debian/install
+echo "prometheus-nginx-exporter_pckg etc/default/" >> debian/install
+echo "nginx-pckg.conf etc/nginx/sites-available/" >> debian/install
 
 #Copy config files
-#[ -f $data_dir/preinst ] && cp $data_dir/preinst debian/ || cp debian/preinst.ex preinst
+[ -f $data_dir/preinst ] && cp $data_dir/preinst debian/ || cp debian/preinst.ex preinst
 [ -f $data_dir/postinst ] && cp $data_dir/postinst debian/ || cp debian/postinst.ex postinst
 [ -f $data_dir/postrm ] && cp $data_dir/postrm debian/ || cp debian/postrm.ex postrm
 [ -f $data_dir/control ] && rm -f debian/control && cp $data_dir/control debian/
@@ -116,7 +129,6 @@ if [ -f debian/postrm ]; then
   echo "Please, check config file postrm"
   nano debian/postrm
 fi
-
 #Create a pckg with sign
 debuild -b  && echo "Package created" || exit 1
 

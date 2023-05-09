@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Tue, 09 May 2023 23:19:17 +0000
+Source: deploy-pckg
+Binary: deploy-pckg
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Serge <mail@sbtraining.net>
+Changed-By: Serge <serge@sigmanet.site>
+Description:
+ deploy-pckg - Package with nginx config for local packages Repository.
+Changes:
+ deploy-pckg (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ f854de1b3f1a9ccd690c2e62638da56d92df047e 12948 deploy-pckg_0.1-1_all.deb
+ b5b5f30be2512a672111e25716e7401ac98a44da 5712 deploy-pckg_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 929802a9208501575bfc2f71012a1e03eb651ae2605284f0bb880b15799e2cde 12948 deploy-pckg_0.1-1_all.deb
+ b295b14ed1d893d28295bf9261db616a563b044ab7ef780768894a3b4254dcca 5712 deploy-pckg_0.1-1_amd64.buildinfo
+Files:
+ 717e054a4072f83445b28bcfdf1b8b8b 12948 misc extra deploy-pckg_0.1-1_all.deb
+ 0a807510481474fea12093a65398a2b2 5712 misc extra deploy-pckg_0.1-1_amd64.buildinfo

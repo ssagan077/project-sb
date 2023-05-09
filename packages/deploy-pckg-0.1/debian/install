@@ -1,0 +1,5 @@
+*.sh usr/bin/
+*.yml etc/prometheus/
+prometheus-node-exporter_pckg etc/default/
+prometheus-nginx-exporter_pckg etc/default/
+nginx-pckg.conf etc/nginx/sites-available/

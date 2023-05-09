@@ -1,0 +1,4 @@
+/etc/default/prometheus-nginx-exporter_pckg
+/etc/default/prometheus-node-exporter_pckg
+/etc/nginx/sites-available/nginx-pckg.conf
+/etc/prometheus/web-node.yml

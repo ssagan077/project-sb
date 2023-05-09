@@ -1,0 +1,9 @@
+Package: deploy-pckg
+Version: 0.1-1
+Architecture: all
+Maintainer: Serge <mail@sbtraining.net>
+Installed-Size: 80
+Depends: nginx (>= 1.18), openssl, dpkg-dev (>= 1.21), gnupg, dh-make (>= 2.202102), devscripts (>= 2.22), prometheus-nginx-exporter, prometheus-node-exporter, iptables-persistent
+Section: misc
+Priority: extra
+Description: Package with nginx config for local packages Repository.

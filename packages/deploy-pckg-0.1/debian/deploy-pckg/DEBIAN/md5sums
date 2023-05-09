@@ -1,0 +1,15 @@
+86aa97fa276f2c687b23f24b971c94b3  usr/bin/create_rep.sh
+d7a761b5511d2dc4710178e715c520f9  usr/bin/make_env_pckg.sh
+31f6d77b5aff7e65d7848b50a9c62f80  usr/bin/make_pckg_ca.sh
+ac68219deeb1e9ac22300bc589ee6045  usr/bin/make_pckg_exp_ovpn.sh
+a7e9d3d933273a7f8c5a754898379bd5  usr/bin/make_pckg_mon.sh
+e740f263a12910702ae3f2994a1a96eb  usr/bin/make_pckg_ovpn.sh
+3f76918895b147094b93123d9894a535  usr/bin/make_pckg_pckg.sh
+01b206d418d0210aa0afc180b5b705f6  usr/bin/make_pckg_ssh.sh
+3050bb5d9c1ea442d1b98792941b2ed7  usr/bin/make_srv_req.sh
+29ef7e0896264dade87ae5ded62765f8  usr/bin/pckg_paths.sh
+5a7fba585d237d5a66a0b85415053f80  usr/bin/prepare_net_pckg.sh
+b8d971030ea4758121c9a4fd009d8a02  usr/bin/recv_sign_srv.sh
+2091ab009ea1c02189373fa8125b64d6  usr/share/doc/deploy-pckg/README.Debian
+d37835bc35819debb07317418b272f90  usr/share/doc/deploy-pckg/changelog.Debian.gz
+77ed1aae575d2a398fbed1c93a957ee8  usr/share/doc/deploy-pckg/copyright

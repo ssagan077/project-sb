@@ -1,0 +1,16 @@
+./create_rep.sh
+./make_env_pckg.sh
+./make_pckg_ca.sh
+./make_pckg_exp_ovpn.sh
+./make_pckg_mon.sh
+./make_pckg_ovpn.sh
+./make_pckg_pckg.sh
+./make_pckg_ssh.sh
+./make_srv_req.sh
+./pckg_paths.sh
+./prepare_net_pckg.sh
+./recv_sign_srv.sh
+./web-node.yml
+./prometheus-node-exporter_pckg
+./prometheus-nginx-exporter_pckg
+./nginx-pckg.conf
