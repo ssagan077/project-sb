@@ -6,6 +6,8 @@ make_pckg_mon.sh
 make_pckg_ovpn.sh
 make_pckg_pckg.sh
 make_pckg_ssh.sh
+make_repo_clone.sh
+start_pckg.sh	
 make_srv_req.sh
 nginx-pckg.conf
 pckg_paths.sh
