@@ -20,3 +20,8 @@ To github.com:ssagan077/project-sb
 remote: Resolving deltas:   0% (0/1)        remote: Resolving deltas: 100% (1/1)        remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
 To github.com:ssagan077/project-sb
    743e06c..8c73067  master -> master
+[master 3502cbc] Update for
+ 1 file changed, 5 insertions(+)
+remote: Resolving deltas:   0% (0/2)        remote: Resolving deltas:  50% (1/2)        remote: Resolving deltas: 100% (2/2)        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To github.com:ssagan077/project-sb
+   8c73067..3502cbc  master -> master
