@@ -1,4 +1,7 @@
 #!/bin/bash
+##This script creates a clone of a remote git repository with our scripts and deb-packages on a new virtual machine.
+##In fact, this is the beginning of the deployment of the infrastructure of our project
+
 # Check the script is being run by current user(no root)
 if [ "$(id -u)" = "0" ]; then
    echo "This script must be run as current user, not root"
@@ -50,5 +53,6 @@ else
    echo "Something went wrong...Try it manually"
    exit 1
 fi
+##git remote add remote-git git@github.com:"${op_user}/project-sb.git"
 
 echo "Now you should run the script start_pckg.sh"

@@ -30,3 +30,46 @@ To github.com:ssagan077/project-sb
 remote: Resolving deltas:   0% (0/2)        remote: Resolving deltas:  50% (1/2)        remote: Resolving deltas: 100% (2/2)        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
 To github.com:ssagan077/project-sb
    3502cbc..15863d1  master -> master
+[master 91f9a3b] Update for 2023_05_14_00:42
+ 43 files changed, 849 insertions(+), 9 deletions(-)
+ create mode 100644 packages/synch-git-0.1/debian/.debhelper/generated/synch-git/installed-by-dh_install
+ create mode 100644 packages/synch-git-0.1/debian/.debhelper/generated/synch-git/installed-by-dh_installdocs
+ create mode 100644 packages/synch-git-0.1/debian/README.Debian
+ create mode 100644 packages/synch-git-0.1/debian/README.source
+ create mode 100644 packages/synch-git-0.1/debian/changelog
+ create mode 100644 packages/synch-git-0.1/debian/control
+ create mode 100644 packages/synch-git-0.1/debian/copyright
+ create mode 100644 packages/synch-git-0.1/debian/debhelper-build-stamp
+ create mode 100644 packages/synch-git-0.1/debian/files
+ create mode 100644 packages/synch-git-0.1/debian/install
+ create mode 100644 packages/synch-git-0.1/debian/postinst
+ create mode 100644 packages/synch-git-0.1/debian/postrm
+ create mode 100644 packages/synch-git-0.1/debian/prerm
+ create mode 100755 packages/synch-git-0.1/debian/rules
+ create mode 100644 packages/synch-git-0.1/debian/source/format
+ create mode 100644 packages/synch-git-0.1/debian/synch-git-docs.docs
+ create mode 100644 packages/synch-git-0.1/debian/synch-git.substvars
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/DEBIAN/conffiles
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/DEBIAN/control
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/DEBIAN/md5sums
+ create mode 100755 packages/synch-git-0.1/debian/synch-git/DEBIAN/postinst
+ create mode 100755 packages/synch-git-0.1/debian/synch-git/DEBIAN/postrm
+ create mode 100755 packages/synch-git-0.1/debian/synch-git/DEBIAN/prerm
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/etc/systemd/system/synch-git.service
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/etc/systemd/system/synch-git.timer
+ create mode 100755 packages/synch-git-0.1/debian/synch-git/usr/bin/synch_git.sh
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/usr/share/doc/synch-git/README.Debian
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/usr/share/doc/synch-git/changelog.Debian.gz
+ create mode 100644 packages/synch-git-0.1/debian/synch-git/usr/share/doc/synch-git/copyright
+ create mode 100644 packages/synch-git-0.1/synch-git.service
+ create mode 100644 packages/synch-git-0.1/synch-git.timer
+ create mode 100755 packages/synch-git-0.1/synch_git.sh
+ create mode 100644 packages/synch-git_0.1-1_all.deb
+ create mode 100644 packages/synch-git_0.1-1_amd64.build
+ create mode 100644 packages/synch-git_0.1-1_amd64.buildinfo
+ create mode 100644 packages/synch-git_0.1-1_amd64.changes
+ create mode 100644 packages/synch-git_0.1.orig.tar.xz
+ create mode 100755 source/pckg/make_pckg_git.sh
+remote: Resolving deltas:   0% (0/6)        remote: Resolving deltas:  16% (1/6)        remote: Resolving deltas:  33% (2/6)        remote: Resolving deltas:  50% (3/6)        remote: Resolving deltas:  66% (4/6)        remote: Resolving deltas:  83% (5/6)        remote: Resolving deltas: 100% (6/6)        remote: Resolving deltas: 100% (6/6), completed with 5 local objects.        
+To github.com:ssagan077/project-sb
+   15863d1..91f9a3b  master -> master

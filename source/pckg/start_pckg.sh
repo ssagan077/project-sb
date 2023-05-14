@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script is the second step in deploying the infrastructure of our project.
+## After creating a local branch of the git repository,
+## we create a local deb package repository to deploy servers with the services
+
 # Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"
@@ -91,6 +95,13 @@ echo -e "\nInstalling package deploy-pckg..."
 if dpkg -l deploy-pckg &>/dev/null; then echo "deploy-pckg has been already installed"
 else
      apt-get install deploy-pckg && echo "package deploy-pckg installed" || exit 1
+fi
+
+#Installing package that synchronizing local git repository with remote one
+echo -e "\nInstalling package synch-git..."
+if dpkg -l synch-git &>/dev/null; then echo "synch-git has been already installed"
+else
+     apt-get install synch-git && echo "package synch-git installed"
 fi
 
 ##Our Variables
