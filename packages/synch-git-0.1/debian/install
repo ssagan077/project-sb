@@ -1,0 +1,3 @@
+synch_git.sh usr/bin/
+synch-git.service etc/systemd/system/
+synch-git.timer etc/systemd/system/

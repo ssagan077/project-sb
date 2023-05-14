@@ -1,0 +1,3 @@
+./synch_git.sh
+./synch-git.service
+./synch-git.timer

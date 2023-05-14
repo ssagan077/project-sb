@@ -1,0 +1,48 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package synch-git
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Serge <serge@sigmanet.site>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_prep
+   dh_auto_install --destdir=debian/synch-git/
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'synch-git' in '../synch-git_0.1-1_all.deb'.
+ dpkg-genbuildinfo --build=binary -O../synch-git_0.1-1_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../synch-git_0.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian synch-git_0.1-1_amd64.changes ...
+E: synch-git: copyright-contains-dh_make-todo-boilerplate
+E: synch-git: extended-description-is-empty
+E: synch-git: helper-templates-in-copyright
+E: synch-git: systemd-service-in-odd-location [etc/systemd/system/synch-git.service]
+W: synch-git: copyright-has-url-from-dh_make-boilerplate
+W: synch-git: initial-upload-closes-no-bugs
+W: synch-git: no-manual-page usr/bin/synch_git.sh
+W: synch-git: priority-extra-is-replaced-by-priority-optional
+W: synch-git: readme-debian-contains-debmake-template
+W: synch-git: script-with-language-extension usr/bin/synch_git.sh
+Finished running lintian.

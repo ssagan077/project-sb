@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Sun, 14 May 2023 00:36:34 +0000
+Source: synch-git
+Binary: synch-git
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Serge <mail@sbtraining.net>
+Changed-By: Serge <serge@sigmanet.site>
+Description:
+ synch-git  - Package for synchronizing a local git repository with a remote on
+Changes:
+ synch-git (0.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ f19b3febb5d9dd83057f7e3e2346cd5805561b29 3408 synch-git_0.1-1_all.deb
+ 367e8c965bb5248c9eb051fdd9f521174c3def10 5699 synch-git_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 65355172db43f4fe2ac625aa9ae18a754e69e5c05fdd4d1180e0b678eb7eeff4 3408 synch-git_0.1-1_all.deb
+ d3785e2b1474d40a336f9d145fb44a6b0d5616f0e3db0e0078c2e92ffad02080 5699 synch-git_0.1-1_amd64.buildinfo
+Files:
+ 68129c8c801696a163e1989445b27057 3408 misc extra synch-git_0.1-1_all.deb
+ 14584d0e87d6405592e37b757c6f8c43 5699 misc extra synch-git_0.1-1_amd64.buildinfo

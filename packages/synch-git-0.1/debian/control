@@ -1,0 +1,11 @@
+Source: synch-git
+Section: misc
+Priority: extra
+Maintainer: Serge <mail@sbtraining.net>
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+
+Package: synch-git
+Architecture: all
+Depends: git
+Description: Package for synchronizing a local git repository with a remote one
