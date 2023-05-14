@@ -1,0 +1,12 @@
+[Unit]
+Description=Synchronizing a local git repository with a remote one
+After=network.target
+
+[Service]
+Type=oneshot
+User=ssagan077
+ExecStart=/usr/bin/synch_git.sh /home/ssagan077/project-sb
+TimeoutStopSec=30s
+
+[Install]
+WantedBy=multi-user.target

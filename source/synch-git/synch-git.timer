@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs Synchronizing a local git repository with a remote one
+
+
+[Timer]
+OnCalendar=Sun 12:00:00
+
+YUnit=synch-git.service
+
+
+[Install]
+WantedBy=multi-user.target

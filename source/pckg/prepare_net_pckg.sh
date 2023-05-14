@@ -10,7 +10,7 @@ source pckg_paths.sh
 
 
 echo "Updating packages..."
-apt-get update && echo "package list updated" || exit 1
+apt-get update &> /dev/null && echo "package list updated" || exit 1
 
 echo "Checking installed software..."
 check_installed "iptables-persistent"

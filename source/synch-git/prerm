@@ -1,0 +1,11 @@
+#!/bin/sh
+# prerm script for deb-pckgs
+#
+# see: dh_installdeb(1)
+
+set -e
+
+  deb-systemd-invoke disable synch-git.service
+  deb-systemd-invoke disable synch-git.timer
+
+exit 0
