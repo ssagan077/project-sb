@@ -1,3 +1,17 @@
 error: pathspec 'for' did not match any file(s) known to git
 error: pathspec '2023_05_13' did not match any file(s) known to git
 Everything up-to-date
+[master 743e06c] Update for 2023_05_14
+ 11 files changed, 155 insertions(+), 4 deletions(-)
+ create mode 100644 source/synch-git/control
+ create mode 100644 source/synch-git/postinst
+ create mode 100644 source/synch-git/postrm
+ create mode 100644 source/synch-git/prerm
+ create mode 100644 source/synch-git/synch-git.service
+ create mode 100644 source/synch-git/synch-git.timer
+ create mode 100644 source/synch-git/synch-git_list
+ create mode 100755 source/synch-git/synch_git.sh
+ create mode 100644 synch-git.log
+remote: Resolving deltas:   0% (0/4)        remote: Resolving deltas:  25% (1/4)        remote: Resolving deltas:  50% (2/4)        remote: Resolving deltas:  75% (3/4)        remote: Resolving deltas: 100% (4/4)        remote: Resolving deltas: 100% (4/4), completed with 4 local objects.        
+To github.com:ssagan077/project-sb
+   9c41582..743e06c  master -> master
