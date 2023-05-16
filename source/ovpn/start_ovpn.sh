@@ -1,4 +1,8 @@
 #!/bin/bash
+## This is the script that initiates installation of the openvpn server on newly created virtual machine.
+## It adds our local repository to the list of trusted repo and installs the necessary packages
+## (deploy_ovpn and ovpn-exporter)
+
 # Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"

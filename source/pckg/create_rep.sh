@@ -1,4 +1,5 @@
 #!/bin/bash
+## This script rebuilds the deb-package repository from the ready-to-publish packages in {GIT_DIR}/PACKAGES directory
 # Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"

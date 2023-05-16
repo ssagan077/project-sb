@@ -1,6 +1,6 @@
 #!/bin/bash
-##This script creates a clone of a remote git repository with our scripts and deb-packages on a new virtual machine.
-##In fact, this is the beginning of the deployment of the infrastructure of our project
+## This script creates a clone of a remote git repository with our scripts and deb-packages on a new virtual machine.
+## This is beginning of the deployment of the infrastructure of our project
 
 # Check the script is being run by current user(no root)
 if [ "$(id -u)" = "0" ]; then

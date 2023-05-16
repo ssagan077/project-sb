@@ -1,7 +1,9 @@
-
 #!/bin/bash
-# Check the script is being run by user (no sudo)
+## This script checks for client or server requests from all servers of our project in the exchange directory
+## of the server vm-pckg-srv, processes them sequentially, signs and sends them to the appropriate directory
+## on the same server
 
+# Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"
    exit 1

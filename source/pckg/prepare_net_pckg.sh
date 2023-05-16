@@ -1,4 +1,6 @@
 #!/bin/bash
+## This script sets up firewall rules and saves them
+
 # Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"

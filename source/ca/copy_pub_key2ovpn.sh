@@ -1,4 +1,9 @@
 #!/bin/bash
+## This script is required to add the user's public key to the OpenVPN server (vm-ovpn-srv).
+## This action is necessary to provide CRL directly to the vm-ovpn-srv
+## In order for the copying procedure to be successful,
+## you must install first a deb package with a temporary ssh configuration on the vm-ovpn-srv server
+## (immediately remove it after copying!!!)
 
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then

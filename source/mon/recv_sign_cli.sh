@@ -1,6 +1,9 @@
 #!/bin/bash
-# Check the script is being run by root (with sudo)
+## This script checks for signed client certificates in the exchange directory with the CA.
+## Script is not currently used (At this time we don't use client certificates for connections to exporters).
 
+
+# Check the script is being run by root (with sudo)
 if [ "$(id -u)" = "0" ]; then
    echo "This script must be run as user, not root"
    exit 1

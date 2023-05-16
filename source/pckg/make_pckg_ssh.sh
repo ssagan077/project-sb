@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script builds a deb-package to quickly replace the ssh-server config file.
+## This configuration allows you to add a public key from another server to the list of allowed connections.
+## This configuration is temporary and this package must be removed immediately after the action is taken.
+
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

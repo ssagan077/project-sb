@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script creates a request for a client certificate (in order to get access to the openvpn server).
+## According to company policy, the certificate request is generated on the client machine,
+## so this script is not currently used.
+
 # Check the script is being run by user (no sudo)
 
 if [ "$(id -u)" == "0" ]; then

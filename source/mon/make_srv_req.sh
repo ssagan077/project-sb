@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script creates a request to generate a server certificate for nginx and prometheus exporters.
+## After creation, the request is copied to the exchange folder with the CA server
+
+# Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"
    exit 1

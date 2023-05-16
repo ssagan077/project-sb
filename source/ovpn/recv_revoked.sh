@@ -1,6 +1,8 @@
 #!/bin/bash
-# Check the script is being run by root (with sudo)
+## This script checks for the presence of a CRL-list in the exchange directory with the CA. 
+## If it exists, copies it to the openvpn server configuration directory and restarts the service
 
+# Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root (sudo)"
    exit 1

@@ -1,6 +1,9 @@
 #!/bin/bash
-# Check the script is being run by root (with sudo)
+## This script checks for signed server certificates in the exchange folder with the CA server,
+## copies them to the appropriate directories, restarts services using these certificates
 
+
+# Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"
    exit 1

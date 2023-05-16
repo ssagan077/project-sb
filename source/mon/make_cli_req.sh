@@ -1,4 +1,10 @@
 #!/bin/bash
+## This script creates a request for a client certificate for prometheus server
+## in order to get access to the prometheus exporters on other servers.
+## According to company policy this scheme is not currently in use
+## so this script is not currently used.
+
+# Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"
    exit 1

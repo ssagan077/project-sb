@@ -1,4 +1,6 @@
 #!/bin/bash
+## This script revokes certificates, generates a CRL and sends it to the openvpn server
+
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

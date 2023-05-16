@@ -1,4 +1,8 @@
 #!/bin/bash
+## This script creates a server openvpn client configuration file.
+## You must first sign the client request in the CA (recv_sign_cli.sh script completed successfully).
+## It also assumes that the openvpn server is configured and ready for client connections.
+
 # Check the script is being run by root (with sudo)
 if [ "$(id -u)" != "0" ]; then
    echo "This script must be run as root"

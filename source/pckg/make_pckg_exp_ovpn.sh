@@ -1,4 +1,7 @@
 #!/bin/bash
+## This script builds a deb package to install the openvpn exporter.
+## The package is built from a compiled binary and, when installed, installs a service to run the exporter.
+
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

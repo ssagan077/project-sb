@@ -1,4 +1,7 @@
 #!/bin/bash
+## This script checks for the presence of exchange directories with a Certification Authority.
+## The same check is performed when creating a certificate request with a script make_srv_req.sh
+.
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

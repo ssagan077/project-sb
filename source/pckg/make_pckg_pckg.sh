@@ -1,4 +1,7 @@
 #!/bin/bash
+## This script builds a deb package to deploy a server with a local deb-package repository (wm-pckg-srv)
+## deb-package includes configuration files for nginx, prometheus exporters, ... And also dependencies
+
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

@@ -1,4 +1,7 @@
 #!/bin/bash
+## This script checks if the required packages are installed, sets up the easy-rsa environment,
+## and creates a root CA certificate
+
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
    echo "This script must be run as current user, not root"

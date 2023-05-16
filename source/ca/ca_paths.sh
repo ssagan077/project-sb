@@ -1,4 +1,6 @@
 #!/bin/bash
+## This script contains variables used by other scripts, as well as some useful functions.
+
 #Our Variables
 op_user="ssagan077"
 ovpn_address="10.88.10.3"   ## Change to 10.88.10.3 after testing !!!!!!

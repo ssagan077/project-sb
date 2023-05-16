@@ -1,4 +1,9 @@
 #!/bin/bash
+## This script is required to add the user's public key to the local package repository server (vm-pckg-srv).
+## This action is necessary to exchange data with the CA server through the exchange folders hosted on the vm-pckg-srv >
+## In order for the copying procedure to be successful,
+## you must install first a deb package with a temporary ssh configuration on the vm-pckg-srv server
+## (immediately remove it after copying!!!)
 
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
