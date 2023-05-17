@@ -78,3 +78,29 @@ To github.com:ssagan077/project-sb
 remote: Resolving deltas:   0% (0/4)        remote: Resolving deltas:  25% (1/4)        remote: Resolving deltas:  50% (2/4)        remote: Resolving deltas:  75% (3/4)        remote: Resolving deltas: 100% (4/4)        remote: Resolving deltas: 100% (4/4), completed with 4 local objects.        
 To github.com:ssagan077/project-sb
    91f9a3b..278aa5f  master -> master
+[master 2929b80] Update for 2023_05_16_12:59
+ 53 files changed, 131 insertions(+), 633 deletions(-)
+ mode change 100644 => 100755 source/ca/ca_paths.sh
+ mode change 100644 => 100755 source/ca/copy_pub_key2ovpn.sh
+ mode change 100644 => 100755 source/ca/copy_pub_key2pckg.sh
+ mode change 100644 => 100755 source/ca/make_env_ca.sh
+ mode change 100644 => 100755 source/ca/make_revoke_cert.sh
+ mode change 100644 => 100755 source/ca/make_sign_req_all.sh
+ mode change 100644 => 100755 source/ca/prepare_net.sh
+ mode change 100644 => 100755 source/ca/start_ca.sh
+ delete mode 100644 source/ovpn/30_04_23/before_start.sh
+ delete mode 100644 source/ovpn/30_04_23/copy_pub_key2ca.sh
+ delete mode 100644 source/ovpn/30_04_23/make_cli_config.sh
+ delete mode 100644 source/ovpn/30_04_23/make_cli_req.sh
+ delete mode 100644 source/ovpn/30_04_23/make_env_ovpn.sh
+ delete mode 100644 source/ovpn/30_04_23/make_srv_req.sh
+ delete mode 100644 source/ovpn/30_04_23/ovpn_paths.sh
+ delete mode 100644 source/ovpn/30_04_23/prepare_net.sh
+ delete mode 100644 source/ovpn/30_04_23/prepare_ovpn.sh
+ delete mode 100644 source/ovpn/30_04_23/recv_sign_cli.sh
+ delete mode 100644 source/ovpn/30_04_23/recv_sign_srv.sh
+ mode change 100644 => 100755 source/pckg/make_repo_clone.sh
+ mode change 100644 => 100755 source/pckg/start_pckg.sh
+remote: Resolving deltas:   0% (0/40)        remote: Resolving deltas:   2% (1/40)        remote: Resolving deltas:   5% (2/40)        remote: Resolving deltas:   7% (3/40)        remote: Resolving deltas:  10% (4/40)        remote: Resolving deltas:  12% (5/40)        remote: Resolving deltas:  15% (6/40)        remote: Resolving deltas:  17% (7/40)        remote: Resolving deltas:  20% (8/40)        remote: Resolving deltas:  22% (9/40)        remote: Resolving deltas:  25% (10/40)        remote: Resolving deltas:  27% (11/40)        remote: Resolving deltas:  30% (12/40)        remote: Resolving deltas:  32% (13/40)        remote: Resolving deltas:  35% (14/40)        remote: Resolving deltas:  37% (15/40)        remote: Resolving deltas:  40% (16/40)        remote: Resolving deltas:  42% (17/40)        remote: Resolving deltas:  45% (18/40)        remote: Resolving deltas:  47% (19/40)        remote: Resolving deltas:  50% (20/40)        remote: Resolving deltas:  52% (21/40)        remote: Resolving deltas:  55% (22/40)        remote: Resolving deltas:  57% (23/40)        remote: Resolving deltas:  60% (24/40)        remote: Resolving deltas:  62% (25/40)        remote: Resolving deltas:  65% (26/40)        remote: Resolving deltas:  67% (27/40)        remote: Resolving deltas:  70% (28/40)        remote: Resolving deltas:  72% (29/40)        remote: Resolving deltas:  75% (30/40)        remote: Resolving deltas:  77% (31/40)        remote: Resolving deltas:  80% (32/40)        remote: Resolving deltas:  82% (33/40)        remote: Resolving deltas:  85% (34/40)        remote: Resolving deltas:  87% (35/40)        remote: Resolving deltas:  90% (36/40)        remote: Resolving deltas:  92% (37/40)        remote: Resolving deltas:  95% (38/40)        remote: Resolving deltas:  97% (39/40)        remote: Resolving deltas: 100% (40/40)        remote: Resolving deltas: 100% (40/40), completed with 36 local objects.        
+To github.com:ssagan077/project-sb
+   278aa5f..2929b80  master -> master
