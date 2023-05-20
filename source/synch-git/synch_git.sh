@@ -16,5 +16,5 @@ fi
 cd ${git_dir}
 git add .
 git commit -m "${descr}" &>> ${log_file}
-git push remote-git &>> ${log_file}
+git push ${remote_git_name} &>> ${log_file}
 

@@ -8,8 +8,8 @@ if [ "$(id -u)" = "0" ]; then
    exit 1
 fi
 
-op_user="ssagan077"
-git_dir="/home/${op_user}/project-sb"
+op_user="user"   ## You should change it before start!!
+git_dir="/home/${op_user}/project-sb" 
 pckg_dir="${git_dir}/packages"
 
 #Checking git

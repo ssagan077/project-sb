@@ -1,9 +1,9 @@
 #!/bin/bash
 ## This script contains variables used by other scripts, as well as some useful functions.
 
-op_user="ssagan077"
-ovpn_address="10.88.10.3"   ## Change to 10.88.10.3 after testing !!!!!!
-ca_address="10.88.10.2"  ## Change to 10.88.10.2 after testing !!!!!!
+op_user="user"  ## You should change it before start!!!
+ovpn_address="10.88.10.3"
+ca_address="10.88.10.2"
 pckg_address="10.88.10.6"
 mon_address="10.88.10.4"
 back_address="10.88.10.5"
@@ -14,6 +14,7 @@ back_server="vm-backup-srv"
 nginx_ssl_dir="/etc/nginx/ssl"
 prom_ssl_dir="/etc/prometheus/ssl"
 git_dir="/home/${op_user}/project-sb"  ## git dir
+remote_git_name="origin"  ## Remote git repository name (check it: git remote -v)
 
 exch_dir="/home/$op_user/exchange"
 exch_in_dir="${exch_dir}/in"        ## Directory for requests 

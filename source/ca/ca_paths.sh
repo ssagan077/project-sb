@@ -2,12 +2,12 @@
 ## This script contains variables used by other scripts, as well as some useful functions.
 
 #Our Variables
-op_user="ssagan077"
-ovpn_address="10.88.10.3"   ## Change to 10.88.10.3 after testing !!!!!!
-ca_address="10.88.10.2"  ## Change to 10.88.10.2 after testing !!!!!!
+op_user="user"  ## You should change it before start!!!
+ovpn_address="10.88.10.3"
+ca_address="10.88.10.2"
 pckg_address="10.88.10.6"
-mon_address="10.88.10.4" ## Change to 10.88.10.4 after testing !!!!!!
-back_address="10.88.10.5" ## Change to 10.88.10.5 after testing !!!!!!
+mon_address="10.88.10.4"
+back_address="10.88.10.5"
 domain_name="sigmanet.site"
 ovpn_server="vm-ovpn-srv"
 mon_server="vm-mon-srv"

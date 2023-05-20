@@ -38,10 +38,10 @@ route:
 receivers:
 - name: 'email-receivers'
   email_configs:
-  - to: 'ssagan077@gmail.com'
-    from: 'ssagan077@gmail.com'
+  - to: 'user@gmail.com'  ## You should change it before start!!!
+    from: 'user@gmail.com' ## You should change it before start!!!
     smarthost: smtp.gmail.com:587
-    auth_username: 'ssagan077@gmail.com'
-    auth_identity: 'ssagan077@gmail.com'
-    auth_password: 'vbdtzfwmrnldlgiv'
+    auth_username: 'user@gmail.com' ## You should change it before start!!!
+    auth_identity: 'user@gmail.com' ## You should change it before start!!!
+    auth_password: 'vbdtzfwmrnldlgiv' ## You should change it before start. This is supposed to be the gmail app password
 

@@ -10,7 +10,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 pckg_address="10.88.10.5"
-op_user="ssagan077"
+op_user="user"   ## You should change it before start!!!
 data_dir="/home/${op_user}/project-sb"
 rep_dir="/var/www/html/debian"
 pckg_dir="${data_dir}/packages"

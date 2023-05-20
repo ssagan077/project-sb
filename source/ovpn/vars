@@ -94,9 +94,9 @@ fi
 
 set_var EASYRSA_REQ_COUNTRY	"ME"
 set_var EASYRSA_REQ_PROVINCE	"."
-set_var EASYRSA_REQ_CITY	"Herceg Novi"
-set_var EASYRSA_REQ_ORG	        "SigmaNet"
-set_var EASYRSA_REQ_EMAIL	"serge@sigmanet.site"
+set_var EASYRSA_REQ_CITY	"MyCity"
+set_var EASYRSA_REQ_ORG	        "MyCompany"
+set_var EASYRSA_REQ_EMAIL	"user@mycompany.com"
 set_var EASYRSA_REQ_OU		"IT"
 
 # Choose a size in bits for your keypairs. The recommended value is 2048.  Using

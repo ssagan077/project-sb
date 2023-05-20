@@ -3,6 +3,8 @@
 ## in order to get access to the prometheus exporters on other servers.
 ## According to company policy this scheme is not currently in use
 ## so this script is not currently used.
+## Please, change request string (-subj)
+
 
 # Check the script is being run by user (no sudo)
 if [ "$(id -u)" == "0" ]; then
@@ -47,7 +49,7 @@ fi
 #Checking if server-mon.req exists
 if [ ! -f "${req_dir}/${cli_name}.req" ]; then
    echo "Creating client request..."
-   openssl req -new -subj "/C=ME/ST=./L=Moscow/O=SigmaNet/OU=IT/CN=${mon_server}.${domain_name}" -key ${cli_name}.key -out ${cli_name}.req && echo "Request created"
+   openssl req -new -subj "/C=US/ST=./L=YourCity/O=YourCompany/OU=IT/CN=${mon_server}.${domain_name}" -key ${cli_name}.key -out ${cli_name}.req && echo "Request created"
    if [ $? -ne 0 ]; then echo "Can't generate request. Please check log files"; exit 1; fi
 else
     echo "Server request already exists. We will send it"
